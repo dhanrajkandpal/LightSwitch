@@ -7,3 +7,4 @@ nltk
 ultralytics
 opencv-python
 pillow
+fastapi
