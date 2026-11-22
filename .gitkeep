@@ -1,0 +1,21 @@
+$folders = @("dl_vision", "ml_engine", "backend", "frontend", "data", "videos", "docs", "saved_models", "assets")
+foreach ($f in $folders) {
+    New-Item -Path $f -ItemType Directory -Force | Out-Null
+    New-Item -Path "$f\.gitkeep" -ItemType File -Force | Out-Null
+}
+
+@"
+.venv/
+__pycache__/
+*.py[cod]
+*.pkl
+*.joblib
+*.pt
+*.onnx
+videos/*.mp4
+videos/*.avi
+.idea/
+.DS_Store
+Thumbs.db
+sandbox/
+"@ | Set-Content -Path ".gitignore" -Encoding UTF8
