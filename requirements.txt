@@ -8,4 +8,3 @@ ultralytics
 opencv-python
 pillow
 fastapi
-ForEach-Object { New-Item -Path "$_\.gitkeep" -ItemType File -Force }
